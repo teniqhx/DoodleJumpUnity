@@ -1,0 +1,51 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: #2E3047;
+
+    padding-inline: 25px;
+    font-family: 'Afacad Flux', sans-serif;
+
+    min-height: 100vh;
+}
+
+.cycle{
+    
+    border-radius: 25px;
+    background-color: #43455C;
+
+    margin-top: 25px;
+    cursor: pointer;
+
+    text-align: center;
+    color: #FBECEB;
+}
+
+.expandable-div {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.6s ease-in-out, opacity 0.3s ease;
+}
+
+/* Розгорнутий стан */
+.expandable-div.active {
+    max-height: 250px; /* Встановіть бажану висоту */
+    opacity: 1;
+}
+
+.expandable-div p, ul, li{
+    margin-top: 0;
+    margin: 10px;
+    text-align: left;
+}
+
+.expandable-div a{
+    text-decoration: none;
+    color: #FBECEB;
+}
